@@ -121,13 +121,13 @@ void SMOKE::Detect(const cv::Mat& raw_img)
     cudaStreamSynchronize(stream_);
     end = std::chrono::high_resolution_clock::now();
     int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - compute_start);
-    std::cout<<"compute:"<<int_ms.count()<<",fps:"<<1000/int_ms.count()<<std::endl;
+    std::cout<<"compute(ms):"<<int_ms.count()<<",fps:"<<1000/int_ms.count()<<std::endl;
     // Decoding and visualization
     PostProcess(img_resize);
 
     end = std::chrono::high_resolution_clock::now();
-    int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - compute_start);
-    std::cout<<"one frame:"<<int_ms.count()<<",fps:"<<1000/int_ms.count()<<std::endl;
+    int_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    std::cout<<"one frame(ms):"<<int_ms.count()<<",fps:"<<1000/int_ms.count()<<std::endl;
 
 }
 
