@@ -23,4 +23,4 @@ make
 
 ## Acknowledgement
 [TensorRT-SMOKE](https://github.com/Yibin122/TensorRT-SMOKE)
-[](https://github.com/open-mmlab/mmdetection3d)
+[mmdetection3d](https://github.com/open-mmlab/mmdetection3d)
