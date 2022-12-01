@@ -211,8 +211,10 @@ float Sigmoid(float x) {
     return 1.0f / (1.0f + expf(-x));
 }
 
-void SMOKE::PostProcess(cv::Mat& input_img) {
-    for (int i = 0; i < TOPK; ++i) {
+void SMOKE::PostProcess(cv::Mat& input_img) 
+{
+    for (int i = 0; i < TOPK; ++i) 
+    {
         if (topk_scores_[i] < SCORE_THRESH) {
             continue;
         }
@@ -311,5 +313,5 @@ void SMOKE::PostProcess(cv::Mat& input_img) {
         }
     }
 
-    cv::imwrite("../result.png",input_img);
+    // cv::imwrite("../result.png",input_img);
 }

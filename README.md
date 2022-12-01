@@ -19,7 +19,7 @@ make
 
 ## performance
 单纯模型推理时间:compute:54ms,fps:18
-全流程时间:one frame:469ms,fps:2
+全流程时间:one frame:55ms,fps:18
 
 ## Acknowledgement
 [TensorRT-SMOKE](https://github.com/Yibin122/TensorRT-SMOKE)
